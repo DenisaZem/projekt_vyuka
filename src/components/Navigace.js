@@ -6,6 +6,7 @@ const Navigace = () => {
             <nav>
             <NavLink to="/">Hlavní stránka</NavLink>
             <NavLink to="review">Přehled slovíček</NavLink>
+            <NavLink to="form">Přidat nové slovíčko</NavLink>
             </nav>
         </header>
 
