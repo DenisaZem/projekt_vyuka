@@ -9,7 +9,7 @@ const App = () => {
   return <BrowserRouter>
             <Routes>
                 <Route path="/" element={<SharedLayOut />}>
-                <Route index element={<Home />}></Route>
+                    <Route index element={<Home />}></Route>
                     <Route path="prehled" element={<PrehledSlov />}> </Route>
                     <Route path="slovicko/:wordId" element={<DetailSlova />}> </Route>
                 </Route>
