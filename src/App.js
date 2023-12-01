@@ -10,8 +10,8 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<SharedLayOut />}>
                     <Route index element={<Home />}></Route>
-                    <Route path="prehled" element={<PrehledSlov />}> </Route>
-                    <Route path="slovicko/:wordId" element={<DetailSlova />}> </Route>
+                    <Route path="review" element={<PrehledSlov />}> </Route>
+                    <Route path="one-word/:wordId" element={<DetailSlova />}> </Route>
                 </Route>
             </Routes>
         </BrowserRouter>

@@ -5,7 +5,7 @@ const Navigace = () => {
   return <header>
             <nav>
             <NavLink to="/">Hlavní stránka</NavLink>
-            <NavLink to="prehled">Přehled slovíček</NavLink>
+            <NavLink to="review">Přehled slovíček</NavLink>
             </nav>
         </header>
 
