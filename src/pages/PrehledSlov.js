@@ -19,13 +19,16 @@ const PrehledSlov = () => {
         snapshot.docs.forEach((oneWord)=>{
           // console.log(oneWord.data())
           result.push({id:oneWord.id, ...oneWord.data()})
-          console.log(result)
-
+          // console.log(result)
         })
+        setData(result)
       }
 
+    }).catch((err)=>{
+      setError(err.message)
     })
-  })
+    
+  },[])
 
   return (
     <div>
