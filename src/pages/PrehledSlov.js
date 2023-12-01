@@ -33,6 +33,17 @@ const PrehledSlov = () => {
   return (
     <div>
     {error && <p>{error}</p>}
+    {data.map((oneWord)=>{
+      const{id, wordDe, wordCze} = oneWord
+
+      return <div key={id}>
+        <p>{wordDe}</p>
+        <p>{wordCze}</p>
+        <Link to={`/one-word/${id}`}>Zobrazit paměťovou větu</Link>
+
+      </div>
+
+    })}
     </div>
   )
 }
