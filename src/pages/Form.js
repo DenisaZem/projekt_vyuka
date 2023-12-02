@@ -11,23 +11,41 @@ const[sentence, setSentence]=useState("")
 
 const submitForm = (e)=>{
     e.preventDefault()
+
+    const newWord = {
+        wordCze,
+        wordDe,
+        sentence
+    }
+
+    projectFirestore.collection("deutsch").add(newWord)
+
+    setWordCze("")
+    setWordDe("")
+    setSentence("")
 }
 
 
   return <form onSubmit={submitForm}>
             <input 
                 type="text"
-                placeholder="České slovíčko" 
+                placeholder="České slovo" 
+                value={wordCze}
+                onChange={(e)=>{setWordCze(e.target.value)}}
              />
              <br />
             <input 
                 type="text"
-                placeholder="Němeské slovíčko" 
+                placeholder="Německý překlad" 
+                value={wordDe}
+                onChange={(e)=>{setWordDe(e.target.value)}}
              />
              <br />
             <input 
                 type="text"
                 placeholder="Vaše paměťová věta" 
+                value={sentence}
+                onChange={(e)=>{setSentence(e.target.value)}}
              />
              <br />
             <input 
