@@ -6,10 +6,10 @@ const Form = () => {
 
 const[wordCze, setWordCze] = useState("")
 const[wordDe, setWordDe] = useState("")
-const[sentence, setSentence]=useState("")
+const[sentence, setSentence ]= useState("")
 
 
-const submitForm = (e)=>{
+const submitForm = async (e)=>{
     e.preventDefault()
 
     const newWord = {
@@ -18,7 +18,15 @@ const submitForm = (e)=>{
         sentence
     }
 
-    projectFirestore.collection("deutsch").add(newWord)
+    try{
+        await projectFirestore.collection("deutsch").add(newWord)
+        setWordCze("")
+        setWordDe("")
+        setSentence("")
+    }catch (err){
+        console.log(err.message)
+    }
+
 
     setWordCze("")
     setWordDe("")

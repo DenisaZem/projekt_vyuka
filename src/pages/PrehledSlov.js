@@ -9,7 +9,7 @@ const PrehledSlov = () => {
   const [error, setError] = useState("");
 
    useEffect (()=>{
-    projectFirestore.collection("deutsch").get().then((snapshot)=>{
+    const unsubscribe = projectFirestore.collection("deutsch").onSnapshot((snapshot)=>{
       console.log(snapshot)
 
       if(snapshot.empty){
@@ -24,9 +24,8 @@ const PrehledSlov = () => {
         setData(result)
       }
 
-    }).catch((err)=>{
-      setError(err.message)
-    })
+    }, (err)=> setError(err.message))
+    return () =>unsubscribe()
     
   },[])
 
