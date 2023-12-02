@@ -1,0 +1,43 @@
+section {
+    margin: 20px;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+  
+h3 {
+    font-size: 24px;
+    color: gray;
+    margin-bottom: 15px;
+}
+  
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+p span{
+    color: gray;
+    font-size: 15px;
+}
+  
+.link {
+    color: black;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 15px;
+    padding: 8px 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+  
+.link:hover {
+    background-color: #f9f9f9;
+}

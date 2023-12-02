@@ -17,7 +17,7 @@ const DetailSlova = () => {
       if(document.exists){
         setData(document.data())
       }else{
-        setError ("Pamětová věta nelze zobrazit")
+        setError ("Příkladová věta nelze zobrazit")
       }
     }).catch((err)=>{
       setError(err.message)
@@ -28,11 +28,11 @@ const DetailSlova = () => {
 
   return <section>
      {error && <p>{error}</p>}
-     
-          <h1>{data.wordCze}</h1>
-          <h3>{data.wordDe}</h3>
-          <p>{data.sentence}</p>
-          <Link to="/review">Zpět na přehled</Link>
+
+          <h1>{data.wordDe}</h1>
+          <h3>{data.wordCze}</h3>
+          <p> <span>Příklad:</span> {data.sentence}</p>
+          <Link to="/review" className="link">Zpět na přehled</Link>
         </section>
 }
 

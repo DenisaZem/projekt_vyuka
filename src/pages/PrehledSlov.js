@@ -37,12 +37,12 @@ const PrehledSlov = () => {
     <div>
     {error && <p>{error}</p>}
     {data.map((oneWord)=>{
-      const{id, wordDe, wordCze} = oneWord
+      const{id, wordDe, wordCze,} = oneWord
 
       return <div key={id} className="wordBorder">
               <p>{wordDe}</p>
               <p><span>překlad</span> {wordCze}</p>
-              <Link to={`/one-word/${id}`} className="link">Zobrazit paměťovou větu</Link>
+              <Link to={`/one-word/${id}`} className="link">Zobrazit příkladovou větu</Link>
               <br />
               <button type="button" onClick={ ()=>deleteWord(id) }className="deleteButton">Smazat slovíčko</button> 
             </div>
