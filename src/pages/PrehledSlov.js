@@ -29,6 +29,10 @@ const PrehledSlov = () => {
     
   },[])
 
+  const deleteWord = (id) =>{
+    projectFirestore.collection("deutsch").doc(id).delete()
+  }
+
   return (
     <div>
     {error && <p>{error}</p>}
@@ -36,11 +40,11 @@ const PrehledSlov = () => {
       const{id, wordDe, wordCze} = oneWord
 
       return <div key={id}>
-        <p>{wordDe}</p>
-        <p>{wordCze}</p>
-        <Link to={`/one-word/${id}`}>Zobrazit paměťovou větu</Link>
-
-      </div>
+              <p>{wordDe}</p>
+              <p>{wordCze}</p>
+              <Link to={`/one-word/${id}`}>Zobrazit paměťovou větu</Link>
+              <button type="button" onClick={ ()=>deleteWord(id) }>Smazat slovíčko</button> 
+            </div>
 
     })}
     </div>
