@@ -1,19 +1,73 @@
-header{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: 30px;
-    font-size: 40px;
+.mainIcon{
+  width: 700px;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.2;
+  right: 60%;
+  top: 10%;
+  z-index: 1;
+  bottom: 0
 }
 
-nav a {
-    margin-right: 30px;
-    margin-bottom: 20px;
-    display: inline-block;
-    text-decoration: none;
-    color: gray; 
+nav{
+  height: 40px;
+  width: 100%;
+  display: flex;
+  background-color: rgb(243, 229, 229);
+  padding: 20px 36px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 60px;
+  position: fixed;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  top: -10px;
+  letter-spacing: 5px;
 }
+
+.iconBook {
+  width: 50px;
+  padding: 10px;
+  border: 2px solid #ddd; 
+  border-radius: 5px; 
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+}
+
+nav a{
+    font-size: 30px;
+    color: black;
+    margin: 30px;
+} 
 
 .active{
-    color: black;
+    color: rgb(93, 91, 91);
 }
+
+/* button{
+    display: none;
+}   */
+
+
+/* @media (max-width: 700px) {
+    nav {
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+    }
+  
+    .menuNavi button {
+      display: block;
+      background-color: transparent;
+      border: none;
+    }
+  
+    .hamburger {
+      color: antiquewhite;
+      font-size: 25px;
+      margin-right: 20px;
+    }
+}
+ */
+

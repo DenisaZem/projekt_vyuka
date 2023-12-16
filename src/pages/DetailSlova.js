@@ -32,7 +32,7 @@ const DetailSlova = () => {
           <h1>{data.wordDe}</h1>
           <h3>{data.wordCze}</h3>
           <p> <span>Příklad:</span> {data.sentence}</p>
-          <Link to="/review" className="link">Zpět na přehled</Link>
+          <Link to="/review" className="linkBack">Zpět na přehled</Link>
         </section>
 }
 

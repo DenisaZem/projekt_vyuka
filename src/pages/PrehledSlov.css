@@ -1,44 +1,117 @@
  body{
-    border: 3px solid #ddd;
-    border-radius: 10px;
-    background-color: #f9f9f9;
+   margin: 0;
+   padding-top: 40px;
+}
+
+.con h1{
+    font-size: 50px;
+    padding: 5px;
+    margin: 0;
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    margin: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  
 }
 
 .wordBorder {
+    width: 300px;
     margin: 15px;
     padding: 20px;
-    border: solid gray;
+    border: 2px solid gray;
+    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
     display: flex;
-    justify-content: space-between; 
-}
+    flex-direction: column; 
+    justify-content: flex-start; 
 
-.wordBorder p {
+
+}
+    
+
+.transWorsDe {
     font-size: 25px;
     font-weight: 800;
+    background-color: #d1d1d12d;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 1px solid gray;
+  
 }
 
-.wordBorder p span {
+.trans {
     font-size: 15px;
     color: gray;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  
 }
 
-.link {
-    color: black;
-    font-size: 20px;
-    font-weight: 600;
-    align-self: center;
+.transWordCz{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: -30px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    border: 1px dotted gray;
 }
 
-.deleteButton {
-    background-color: #ff6666;
+.buttons{
+    display: flex;
+    /* flex-direction: row; */
+    /* width: 100%; */
+    justify-content: space-between;
+    /* Dotaz: padding-křivost */
+    /* padding: 30px; */
+
+}
+
+.linkView {
+    background-color: #9a8885;
     color: #fff;
-    padding: 5px 10px;
-    margin: 20px;
+    padding: 20px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;  
+    font-size: 16px;
+}
+.linkView:hover {
+    background-color: rgb(76, 77, 76);
 }
 
+.deleteButton {
+    background-color: #f78a8a;
+    color: #fff;
+    padding: 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
 .deleteButton:hover {
     background-color: #ff3333;
+}
+
+@media screen and (max-width:450px){
+    .linkView, .deleteButton {
+        padding: 10px; 
+        font-size: 14px;
+    }
+
+    .con h1{
+        font-size: 40px;
+    }
+    
 }

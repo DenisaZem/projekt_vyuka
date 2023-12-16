@@ -17,9 +17,7 @@ const PrehledSlov = () => {
       } else{
         let result = []
         snapshot.docs.forEach((oneWord)=>{
-          // console.log(oneWord.data())
-          result.push({id:oneWord.id, ...oneWord.data()})
-          // console.log(result)
+          result.push({id:oneWord.id, ...oneWord.data()}) 
         })
         setData(result)
       }
@@ -34,20 +32,26 @@ const PrehledSlov = () => {
   }
 
   return (
-    <div>
-    {error && <p>{error}</p>}
-    {data.map((oneWord)=>{
+    <div className="con">
+    <h1>Přehled slov</h1>
+     <div className="container">
+      {error && <p>{error}</p>}
+      {data.map((oneWord)=>{
       const{id, wordDe, wordCze,} = oneWord
 
       return <div key={id} className="wordBorder">
-              <p>{wordDe}</p>
-              <p><span>překlad</span> {wordCze}</p>
-              <Link to={`/one-word/${id}`} className="link">Zobrazit příkladovou větu</Link>
-              <br />
-              <button type="button" onClick={ ()=>deleteWord(id) }className="deleteButton">Smazat slovíčko</button> 
+              <p className="transWorsDe">{wordDe}</p>
+              <p className="trans">překlad </p> <br />
+              <p className="transWordCz">{wordCze}</p>
+              <div className="buttons">
+                <Link to={`/one-word/${id}`} className="linkView">Zobrazit větu</Link>
+                <br />
+                <button type="button" onClick={ ()=>deleteWord(id) }className="deleteButton">Smazat slovo</button>      
+              </div>
             </div>
 
     })}
+      </div>
     </div>
   )
 }

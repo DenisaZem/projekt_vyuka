@@ -1,7 +1,45 @@
-.home-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh; 
-  }
+.home{
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+}
+
+.screen{
+background-image: url("https://cdn.pixabay.com/photo/2020/08/18/12/49/books-5498153_960_720.png");
+background-size: contain;
+background-repeat: repeat; 
+/* opacity: 0.1; */
+}
+
+/* .screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.1); 
+  z-index: -1;
+} */
+
+.home-container  {
+  background-color:  rgba(243, 229, 229, 0.768);
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  min-width: 300px;
   
+
+}
+
+ .home h1 {
+  font-size: 60px;
+  padding: 5px;
+  margin: 0;
+}
+
+.home p {
+  padding: 10px;
+ 
+  text-align: justify;
+}

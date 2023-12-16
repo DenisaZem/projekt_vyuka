@@ -1,3 +1,7 @@
+body{
+  padding-top: 100px;
+}
+
 form {
     max-width: 400px;
     margin: 0 auto;
@@ -17,11 +21,11 @@ form {
   }
   
   input[type="submit"] {
-    background-color: #4f5650;
+    background-color: rgba(230, 142, 120, 0.774);
     color: #fff;
     cursor: pointer;
   }
   
   input[type="submit"]:hover {
-    background-color: #425647;
+    background-color: rgba(230, 142, 120, 0.908);
   }
