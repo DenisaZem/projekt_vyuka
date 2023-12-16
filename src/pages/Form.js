@@ -34,33 +34,36 @@ const submitForm = async (e)=>{
 }
 
 
-  return <form onSubmit={submitForm}>
-            <input 
-                type="text"
-                placeholder="České slovo" 
-                value={wordCze}
-                onChange={(e)=>{setWordCze(e.target.value)}}
-             />
-             <br />
-            <input 
-                type="text"
-                placeholder="Německý překlad" 
-                value={wordDe}
-                onChange={(e)=>{setWordDe(e.target.value)}}
-             />
-             <br />
-            <input 
-                type="text"
-                placeholder="Vaše paměťová věta" 
-                value={sentence}
-                onChange={(e)=>{setSentence(e.target.value)}}
-             />
-             <br />
-            <input 
-                type="submit" 
-                value="Přidat nové slovíčko do databáze" 
-            />   
-         </form>
+  return <div>
+             <h1>Přidat nové slovo</h1>
+             <form onSubmit={submitForm}>
+                <input 
+                    type="text"
+                    placeholder="České slovo" 
+                    value={wordCze}
+                    onChange={(e)=>{setWordCze(e.target.value)}}
+                />
+                <br />
+                <input 
+                    type="text"
+                    placeholder="Německý překlad" 
+                    value={wordDe}
+                    onChange={(e)=>{setWordDe(e.target.value)}}
+                />
+                <br />
+                <input 
+                    type="text"
+                    placeholder="Vaše příkladová věta" 
+                    value={sentence}
+                    onChange={(e)=>{setSentence(e.target.value)}}
+                />
+                <br />
+                <input 
+                    type="submit" 
+                    value="Přidat nové slovíčko do databáze" 
+                />   
+             </form>
+         </div>
 }
 
 export default Form

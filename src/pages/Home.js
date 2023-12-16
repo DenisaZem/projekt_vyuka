@@ -5,6 +5,15 @@ const Home = () => {
     <div className="screen">
      <div className="home">
       <h1>Úvod</h1>
+      <div className="containerBanner">
+        <div className="quote">
+          <p>
+            “Education is the passport to the future, 
+            for tomorrow belongs to those who prepare 
+            for it today.” —Malcolm X
+          </p>
+        </div>
+      </div>
         <div className="home-container">
           <p>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta

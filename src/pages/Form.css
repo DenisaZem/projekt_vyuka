@@ -2,6 +2,14 @@ body{
   padding-top: 100px;
 }
 
+h1{
+  color: rgb(216, 208, 208);
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 5px;
+  font-size: 50px;
+}
+
 form {
     max-width: 400px;
     margin: 0 auto;

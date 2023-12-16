@@ -1,3 +1,7 @@
+body{
+background-color: rgb(50, 50, 50);
+}
+
 .mainIcon{
   width: 700px;
   position: fixed;
@@ -15,7 +19,7 @@ nav{
   height: 40px;
   width: 100%;
   display: flex;
-  background-color: rgb(243, 229, 229);
+  background-color: rgb(38, 37, 37);
   padding: 20px 36px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
   border-radius: 60px;
@@ -37,12 +41,12 @@ nav{
 
 nav a{
     font-size: 30px;
-    color: black;
+    color: rgb(168, 166, 163);
     margin: 30px;
 } 
 
 .active{
-    color: rgb(93, 91, 91);
+    color: rgb(247, 244, 239);
 }
 
 /* button{

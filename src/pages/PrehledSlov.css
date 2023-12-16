@@ -8,6 +8,7 @@
     padding: 5px;
     margin: 0;
     text-align: center;
+    color: rgb(216, 208, 208)
 }
 
 .container{
@@ -16,7 +17,7 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-  
+    background-color: #3f3e3e;
 }
 
 .wordBorder {
@@ -28,11 +29,9 @@
     display: flex;
     flex-direction: column; 
     justify-content: flex-start; 
-
-
+    background-color: #c6c0c0;
 }
     
-
 .transWorsDe {
     font-size: 25px;
     font-weight: 800;
@@ -42,7 +41,10 @@
     justify-content: center;
     align-content: center;
     border: 1px solid gray;
-  
+}
+
+p.transWorsDe{
+    color: rgb(42, 41, 41);
 }
 
 .trans {
@@ -62,6 +64,10 @@
     justify-content: center;
     align-content: center;
     border: 1px dotted gray;
+}
+
+p.transWordCz{
+    color: rgb(42, 41, 41);
 }
 
 .buttons{

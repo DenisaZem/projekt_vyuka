@@ -1,3 +1,8 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
 .home{
   display: flex;
   flex-direction: column;
@@ -5,41 +10,58 @@
 }
 
 .screen{
-background-image: url("https://cdn.pixabay.com/photo/2020/08/18/12/49/books-5498153_960_720.png");
+/* background-image: url("https://cdn.pixabay.com/photo/2020/08/18/12/49/books-5498153_960_720.png"); */
+/* background-image: url("https://cdn.pixabay.com/photo/2014/09/05/18/32/old-books-436498_1280.jpg"); */
+background-color: rgb(50, 50, 50);
 background-size: contain;
 background-repeat: repeat; 
 /* opacity: 0.1; */
 }
 
-/* .screen::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.1); 
-  z-index: -1;
-} */
+.containerBanner{
+  max-width: 800px;
+  min-width: 300px;
+  height: 500px;
+  margin-bottom: 40px;
+  background-image: url("https://hips.hearstapps.com/hmg-prod/images/group-of-books-on-wooden-planks-background-top-view-royalty-free-image-1680795933.jpg");
+  background-size:cover;
+  background-repeat: no-repeat;
+
+
+}
+
+.quote{
+  text-align: center;
+  background-color: rgb(50, 50, 50);
+  position: relative;
+  border-radius: 20px;
+  top: 170px;
+}
+
+.quote p{
+  margin:20px;
+  color: rgb(216, 208, 208);
+  font-family: 'Courier New', Courier, monospace;
+}
+
 
 .home-container  {
-  background-color:  rgba(243, 229, 229, 0.768);
+  background-color:  rgba(111, 108, 108, 0.933);
   display: flex;
   flex-direction: column;
   max-width: 800px;
   min-width: 300px;
-  
-
 }
 
  .home h1 {
   font-size: 60px;
   padding: 5px;
   margin: 0;
+  color: rgb(216, 208, 208);
 }
 
 .home p {
   padding: 10px;
- 
+  color: rgb(216, 208, 208);
   text-align: justify;
 }
