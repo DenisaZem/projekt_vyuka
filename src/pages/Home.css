@@ -26,16 +26,19 @@ background-repeat: repeat;
   background-image: url("https://hips.hearstapps.com/hmg-prod/images/group-of-books-on-wooden-planks-background-top-view-royalty-free-image-1680795933.jpg");
   background-size:cover;
   background-repeat: no-repeat;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .quote{
   text-align: center;
   background-color: rgb(50, 50, 50);
-  position: relative;
   border-radius: 20px;
-  top: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
 }
 
 .quote p{

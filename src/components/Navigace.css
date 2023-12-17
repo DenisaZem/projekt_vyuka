@@ -49,29 +49,70 @@ nav a{
     color: rgb(247, 244, 239);
 }
 
-/* button{
+.justBut{
     display: none;
-}   */
+   
+}  
 
 
-/* @media (max-width: 700px) {
+@media screen and (max-width: 800px) {
     nav {
-      flex-direction: column;
-      justify-content: center;
-      align-items: flex-start;
+      display: flex;
+      box-shadow: none;
+      height: 60px;
+   
     }
-  
-    .menuNavi button {
-      display: block;
+
+    nav a{
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+    }
+
+    button{
+      color: rgb(255, 175, 14) ;
       background-color: transparent;
       border: none;
-    }
-  
-    .hamburger {
-      color: antiquewhite;
-      font-size: 25px;
+      font-size: 40px;
+      width: 40px;
+      height: 40px; 
       margin-right: 20px;
-    }
+  } 
+
+  .justBut{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+  }
+
+  nav a{
+    width: 100%;
+    font-size: 30px;
+    color: rgb(168, 166, 163);
+    margin: 30px;
+} 
+
+.iconBook {
+  display: none;
 }
- */
+
+.hide{
+  display: none;
+  height: 0px;
+  overflow: hidden;
+  transition:all 0.1s linear ;
+}
+
+.show{
+  height: 200px;
+  transition: all 0.1s linear;
+  width: 50%;
+  border-radius: 5;
+  margin-top: 20px;
+}
+
+  }
+
+ 
+
 
