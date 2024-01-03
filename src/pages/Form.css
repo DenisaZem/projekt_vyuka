@@ -1,13 +1,15 @@
-body{
+body, html{
   padding-top: 100px;
+
 }
 
 h1{
-  color: rgb(216, 208, 208);
+  color: #a9a7b4;;
   text-align: center;
   margin-bottom: 40px;
-  margin-top: 5px;
-  font-size: 50px;
+  margin-top: 50px;
+  font-size: 30px;
+
 }
 
 form {
@@ -16,24 +18,40 @@ form {
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 8px;
-    background-color: #f9f9f9;
+    background-color: #7F7C9B;
   }
   
   input {
     width: 100%;
     margin-bottom: 10px;
     padding: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #dbdbdb;
     border-radius: 4px;
     box-sizing: border-box;
+    background-color:#c1c0c7;
+    font-size: 16px;
+    
   }
   
   input[type="submit"] {
-    background-color: rgba(230, 142, 120, 0.774);
+    background-color: rgb(255, 175, 14);
     color: #fff;
     cursor: pointer;
+  
   }
   
   input[type="submit"]:hover {
-    background-color: rgba(230, 142, 120, 0.908);
+    background-color: rgb(236, 159, 5);
+  }
+
+
+  @media screen and (max-width: 550px){
+    form {
+      max-width: 300px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #7F7C9B;
+    }
   }

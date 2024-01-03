@@ -1,6 +1,32 @@
 body{
-background-color: rgb(50, 50, 50);
+background-color:  #262548;
+font-family:Helvetica;
+  margin: 0; /* Nastavuje nulový okraj, aby se zabránilo výchozímu okraji těla stránky */
+  overflow-x: hidden;
 }
+
+
+
+.work-menu .menu-overlay {
+  position: fixed;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.912);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.nav.show .menu-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+
+
 
 .mainIcon{
   width: 700px;
@@ -15,38 +41,55 @@ background-color: rgb(50, 50, 50);
   bottom: 0
 }
 
+
+
 nav{
-  height: 40px;
+  height: 70px;
   width: 100%;
   display: flex;
-  background-color: rgb(38, 37, 37);
+  background-color: white;
   padding: 20px 36px;
-  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 60px;
   position: fixed;
   flex-direction: row;
   justify-content:center;
   align-items: center;
   top: -10px;
-  letter-spacing: 5px;
+  z-index: 3;
 }
 
+
+.close-nav-menu{
+ visibility:hidden;
+ width: 0;
+ height: 0;
+}
+
+/* .nav-menu{
+  height: 50px;
+  width: 100%;
+  z-index: 99;
+}
+
+.menu{
+  background-color: aqua;
+} */
+
 .iconBook {
-  width: 50px;
+  width: 200px;
   padding: 10px;
-  border: 2px solid #ddd; 
-  border-radius: 5px; 
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2); 
+
 }
 
 nav a{
-    font-size: 30px;
-    color: rgb(168, 166, 163);
+    font-size: 25px;
+    font-weight: bold;
+    color: #525272;
     margin: 30px;
+    text-decoration: none;
 } 
 
 .active{
-    color: rgb(247, 244, 239);
+    color: #262633;
 }
 
 .justBut{
@@ -55,21 +98,51 @@ nav a{
 }  
 
 
-@media screen and (max-width: 800px) {
-    nav {
-      display: flex;
-      box-shadow: none;
-      height: 60px;
-   
+
+@media screen and (max-width: 1020px){
+  .iconBook {
+    width: 100px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 950px){
+  .iconBook {
+   display: none;
+  }
+}
+
+
+@media screen and (max-width: 810px) {
+  body{
+    font-family:Helvetica;
     }
 
-    nav a{
-      text-align: center;
+    .menu{
       display: flex;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
     }
 
-    button{
+    .menu a{
+      text-align: center;
+      font-size: 30px;
+      color: #ffffff;
+      padding: 20px;
+      margin: 0;
+      width: 100%;
+      border-bottom: 1px solid  #525272;
+    }
+
+    .menu a:first-child {
+      border-top: 1px solid #525272;
+      padding: 20px;
+
+    }
+
+    .menuButton{
       color: rgb(255, 175, 14) ;
       background-color: transparent;
       border: none;
@@ -77,6 +150,9 @@ nav a{
       width: 40px;
       height: 40px; 
       margin-right: 20px;
+      z-index: 99;
+      position:absolute;
+      top: 30px;
   } 
 
   .justBut{
@@ -85,34 +161,107 @@ nav a{
     justify-content: end;
   }
 
-  nav a{
-    width: 100%;
-    font-size: 30px;
-    color: rgb(168, 166, 163);
-    margin: 30px;
-} 
 
 .iconBook {
   display: none;
 }
 
+/* .overlay .hide {
+  cursor: pointer;
+} */
+
 .hide{
   display: none;
   height: 0px;
   overflow: hidden;
-  transition:all 0.1s linear ;
+  transition:all 0.4s ease ;
 }
 
-.show{
-  height: 200px;
+/* .overlay .show {
+  display: block; 
+} */
+
+nav.nav.show{
+  display: flex;
+  height: 100%;
   transition: all 0.1s linear;
   width: 50%;
-  border-radius: 5;
-  margin-top: 20px;
+  background-color: rgb(255, 175, 14);
+  border: 2px solid #262633;
+  transition: all 0.3s ease;
+
 }
+
+
+/* .show img {
+  width: 200px;
+  height: 200px;
+  position: fixed;
+  cursor: pointer;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.menu-overlay {
+  position: fixed;
+  z-index: 99;
+  background-color: rgba(0, 0, 0, 0.773);
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  /* visibility: hidden; 
+  opacity: 0; */
+  transition: all 0.3s ease;
+}
+
+.nav.show .menu-overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-nav-menu{
+  display: flex;
+  visibility: visible;
+  justify-content: center;
+  align-items:start;
+  position: absolute;
+  cursor: pointer;
+  width: 100px;
+  height: 80px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+
+
+.close-nav-menu img{
+  width: 50px;
+  height: 50px;
+  background-color: rgb(255, 175, 14);
+  
+}
+
+.work-menu{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-menu{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu{
+
+}
+
 
   }
 
  
-
 

@@ -26,14 +26,17 @@ const DetailSlova = () => {
   },[wordId])
 
 
-  return <section>
-     {error && <p>{error}</p>}
+  return <div className="main">
+          <section>
+         {error && <p>{error}</p>}
 
-          <h1>{data.wordDe}</h1>
-          <h3>{data.wordCze}</h3>
-          <p> <span>Příklad:</span> {data.sentence}</p>
-          <Link to="/review" className="linkBack">Zpět na přehled</Link>
-        </section>
+            <h1>{data.wordDe}</h1>
+            <h3>{data.wordCze}</h3>
+            <p> <span>Příklad:</span></p>
+            <p>{data.sentence}</p>
+            <Link to="/review" className="linkBack">Zpět na přehled</Link>
+          </section>
+        </div>
 }
 
 export default DetailSlova

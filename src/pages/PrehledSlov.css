@@ -1,14 +1,23 @@
  body{
    margin: 0;
    padding-top: 40px;
+   font-family:Helvetica;
+ 
+
+}
+
+.con{
+    background-color: #262548;
 }
 
 .con h1{
-    font-size: 50px;
+    font-size: 30px;
     padding: 5px;
-    margin: 0;
+    margin-top:30px;
+    margin-bottom: 0;
     text-align: center;
-    color: rgb(216, 208, 208)
+    color: #a9a7b4;
+    
 }
 
 .container{
@@ -17,94 +26,101 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: #3f3e3e;
+    /* background-color: #615D76; */
 }
 
 .wordBorder {
     width: 300px;
     margin: 15px;
     padding: 20px;
-    border: 2px solid gray;
-    box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.5);
+    border: 2px solid rgb(168, 166, 163);
+    box-shadow: -10px -10px 20px #615D76;
     display: flex;
     flex-direction: column; 
     justify-content: flex-start; 
-    background-color: #c6c0c0;
+    background-color: #7F7C9B;
 }
     
 .transWorsDe {
     font-size: 25px;
     font-weight: 800;
-    background-color: #d1d1d12d;
+    /* background-color: #7f7f8c; */
     padding: 1px;
     display: flex;
     justify-content: center;
     align-content: center;
-    border: 1px solid gray;
+    border: 1px solid rgb(168, 166, 163);
 }
 
 p.transWorsDe{
-    color: rgb(42, 41, 41);
+    color: #262548;
+
 }
 
 .trans {
     font-size: 15px;
-    color: gray;
+    color: rgb(194, 193, 192);
     display: flex;
     justify-content: center;
     align-content: center;
+    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 0;
   
 }
 
 .transWordCz{
     font-size: 25px;
     font-weight: 800;
-    margin-top: -30px;
+    margin-bottom: 30px;
+    margin-top: 0px;
     display: flex;
     justify-content: center;
     align-content: center;
-    border: 1px dotted gray;
+    border: 1px dotted rgb(168, 166, 163);
 }
 
 p.transWordCz{
-    color: rgb(42, 41, 41);
+    color: #262548;
+    font-size: 20px;
 }
 
 .buttons{
     display: flex;
-    /* flex-direction: row; */
-    /* width: 100%; */
     justify-content: space-between;
-    /* Dotaz: padding-křivost */
-    /* padding: 30px; */
+    max-width: 300px;
+    max-height: 45px;
+
 
 }
 
 .linkView {
-    background-color: #9a8885;
+    background-color: rgb(255, 175, 14);
     color: #fff;
     padding: 20px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;  
-    font-size: 16px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
 }
 .linkView:hover {
-    background-color: rgb(76, 77, 76);
+    background-color: rgb(240, 183, 69);
 }
 
 .deleteButton {
-    background-color: #f78a8a;
+    background-color: #706ba5;;
     color: #fff;
     padding: 20px;
     border: none;
     border-radius: 3px;
     cursor: pointer;
     text-decoration: none;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
 }
 .deleteButton:hover {
     background-color: #ff3333;
@@ -117,7 +133,18 @@ p.transWordCz{
     }
 
     .con h1{
-        font-size: 40px;
+        font-size: 30px;
     }
     
+}
+
+@media screen and (max-width: 390px) {
+    .linkView, .deleteButton {
+        padding: 10px; 
+        font-size: 12px;
+    }
+
+    .con h1 {
+        font-size: 30px;
+    }
 }
