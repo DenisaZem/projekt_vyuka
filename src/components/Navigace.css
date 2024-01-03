@@ -1,11 +1,9 @@
-body{
-background-color:  #262548;
-font-family:Helvetica;
-  margin: 0; /* Nastavuje nulový okraj, aby se zabránilo výchozímu okraji těla stránky */
+body {
+  background-color: #262548;
+  font-family: Helvetica;
+  margin: 0;
   overflow-x: hidden;
 }
-
-
 
 .work-menu .menu-overlay {
   position: fixed;
@@ -25,9 +23,6 @@ font-family:Helvetica;
   opacity: 1;
 }
 
-
-
-
 .mainIcon{
   width: 700px;
   position: fixed;
@@ -40,8 +35,6 @@ font-family:Helvetica;
   z-index: 1;
   bottom: 0
 }
-
-
 
 nav{
   height: 70px;
@@ -64,23 +57,12 @@ nav{
  height: 0;
 }
 
-/* .nav-menu{
-  height: 50px;
-  width: 100%;
-  z-index: 99;
-}
-
-.menu{
-  background-color: aqua;
-} */
-
 .iconBook {
   width: 200px;
   padding: 10px;
-
 }
 
-nav a{
+nav a {
     font-size: 25px;
     font-weight: bold;
     color: #525272;
@@ -88,15 +70,21 @@ nav a{
     text-decoration: none;
 } 
 
-.active{
+/* .menu a{
+  transition: transform 0.5s ease;
+} */
+
+/* menu a:hover {
+  transform: scale(1.2);
+} */
+
+.active {
     color: #262633;
 }
 
 .justBut{
     display: none;
-   
 }  
-
 
 
 @media screen and (max-width: 1020px){
@@ -116,44 +104,54 @@ nav a{
 @media screen and (max-width: 810px) {
   body{
     font-family:Helvetica;
-    }
+  }
 
-    .menu{
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+  .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 
-    }
+  .menu a{
+    text-align: center;
+    font-size: 25px;
+    color: #ffffff;
+    padding: 20px;
+    margin: 0;
+    width: 100%;
+    border-bottom: 1px solid  #525272;
+    transition: transform 0.5s ease;
+  }
 
-    .menu a{
-      text-align: center;
-      font-size: 30px;
-      color: #ffffff;
-      padding: 20px;
-      margin: 0;
-      width: 100%;
-      border-bottom: 1px solid  #525272;
-    }
+  .menu a:hover {
+    transform: scale(1.2);
+  }
 
-    .menu a:first-child {
-      border-top: 1px solid #525272;
-      padding: 20px;
+  .menu a:first-child {
+    border-top: 1px solid #525272;
+    padding: 20px;
 
-    }
+  }
 
-    .menuButton{
-      color: rgb(255, 175, 14) ;
-      background-color: transparent;
-      border: none;
-      font-size: 40px;
-      width: 40px;
-      height: 40px; 
-      margin-right: 20px;
-      z-index: 99;
-      position:absolute;
-      top: 30px;
-  } 
+  .menuButton{
+    color: rgb(255, 175, 14) ;
+    background-color: transparent;
+    border: none;
+    font-size: 40px;
+    width: 40px;
+    height: 40px; 
+    margin-right: 20px;
+    z-index: 99;
+    position:fixed;
+    top: 30px;
+    right: 30px;
+    transition: transform 0.5s ease;
+} 
+
+  .menuButton:hover {
+    transform: scale(1.2);
+  }
 
   .justBut{
     display: flex;
@@ -166,20 +164,12 @@ nav a{
   display: none;
 }
 
-/* .overlay .hide {
-  cursor: pointer;
-} */
-
 .hide{
   display: none;
   height: 0px;
   overflow: hidden;
-  transition:all 0.4s ease ;
+  transition:all 0.8s ease ;
 }
-
-/* .overlay .show {
-  display: block; 
-} */
 
 nav.nav.show{
   display: flex;
@@ -189,20 +179,8 @@ nav.nav.show{
   background-color: rgb(255, 175, 14);
   border: 2px solid #262633;
   transition: all 0.3s ease;
-
+  transform: translateX(0);
 }
-
-
-/* .show img {
-  width: 200px;
-  height: 200px;
-  position: fixed;
-  cursor: pointer;
-  z-index: 99;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
 
 .menu-overlay {
   position: fixed;
@@ -212,17 +190,15 @@ nav.nav.show{
   top: 0;
   height: 100%;
   width: 100%;
-  /* visibility: hidden; 
-  opacity: 0; */
-  transition: all 0.3s ease;
 }
+
 
 .nav.show .menu-overlay {
   visibility: visible;
   opacity: 1;
 }
 
-.close-nav-menu{
+/* .close-nav-menu{
   display: flex;
   visibility: visible;
   justify-content: center;
@@ -233,15 +209,15 @@ nav.nav.show{
   height: 80px;
   left: 50%;
   transform: translate(-50%, -100%);
-}
+  transition: transform 0.8s ease;
+} */
 
 
-.close-nav-menu img{
+/* .close-nav-menu img{
   width: 50px;
   height: 50px;
   background-color: rgb(255, 175, 14);
-  
-}
+} */
 
 .work-menu{
   display: flex;
@@ -251,16 +227,11 @@ nav.nav.show{
 
 .nav-menu{
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 40%;
+  left: 50%; 
+  transform: translateX(-50%);
+  transition: transform 0.8s ease;
 }
-
-.menu{
-
-}
-
-
   }
 
  

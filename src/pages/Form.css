@@ -1,24 +1,23 @@
 body, html{
   padding-top: 100px;
-
 }
 
 h1{
   color: #a9a7b4;;
   text-align: center;
   margin-bottom: 40px;
-  margin-top: 50px;
   font-size: 30px;
-
 }
 
 form {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 8px;
     background-color: #7F7C9B;
+    border: 2px solid rgb(168, 166, 163);
+    box-shadow: -40px -30px 20px #1b1a1a;
   }
   
   input {
@@ -30,14 +29,12 @@ form {
     box-sizing: border-box;
     background-color:#c1c0c7;
     font-size: 16px;
-    
   }
   
   input[type="submit"] {
     background-color: rgb(255, 175, 14);
     color: #fff;
     cursor: pointer;
-  
   }
   
   input[type="submit"]:hover {

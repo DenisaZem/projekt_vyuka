@@ -2,8 +2,6 @@
    margin: 0;
    padding-top: 40px;
    font-family:Helvetica;
- 
-
 }
 
 .con{
@@ -13,11 +11,8 @@
 .con h1{
     font-size: 30px;
     padding: 5px;
-    margin-top:30px;
-    margin-bottom: 0;
     text-align: center;
     color: #a9a7b4;
-    
 }
 
 .container{
@@ -26,7 +21,6 @@
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    /* background-color: #615D76; */
 }
 
 .wordBorder {
@@ -34,7 +28,7 @@
     margin: 15px;
     padding: 20px;
     border: 2px solid rgb(168, 166, 163);
-    box-shadow: -10px -10px 20px #615D76;
+    box-shadow: -10px -10px 5px #1b1b1c;
     display: flex;
     flex-direction: column; 
     justify-content: flex-start; 
@@ -54,7 +48,6 @@
 
 p.transWorsDe{
     color: #262548;
-
 }
 
 .trans {
@@ -66,7 +59,6 @@ p.transWorsDe{
     margin: 10px;
     margin-top: 30px;
     margin-bottom: 0;
-  
 }
 
 .transWordCz{
@@ -90,8 +82,6 @@ p.transWordCz{
     justify-content: space-between;
     max-width: 300px;
     max-height: 45px;
-
-
 }
 
 .linkView {
@@ -122,6 +112,7 @@ p.transWordCz{
     display: flex;
     align-items: center;
 }
+
 .deleteButton:hover {
     background-color: #ff3333;
 }
