@@ -37,9 +37,9 @@ body{
 }
 
 .screen{
-background-color: #262548;
-background-size: contain;
-background-repeat: repeat; 
+  background-color: #262548;
+  background-size: contain;
+  background-repeat: repeat; 
 }
 
 .containerBanner{
