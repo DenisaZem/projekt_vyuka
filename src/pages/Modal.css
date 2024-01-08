@@ -1,4 +1,21 @@
-section{
-    margin: 0;
-    padding: 0;
+
+
+
+.modal-box{
+    position: relative;
+
+}
+
+.modal-text{
+
+    position: absolute;
+    top: -100px;
+    left: -50px;
+    font-size: 30px;
+    width: 250px;
+    color: yellow;
+
+    
+
+
 }

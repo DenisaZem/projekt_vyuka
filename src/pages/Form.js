@@ -13,23 +13,45 @@ const[showNotification, setShowNotification ]= useState("")
 
 const reducer =(state, action)=>{
 
-    if(action.type === "ADD_WORD"){
-        const newWords = [...state.wordDe, action.payload ]
+    if (action.type === "ADD_WORD") {
+        const newWords = [...state.wordDe, action.payload]
+        console.log("vše ok")
+        return {
+          ...state,
+          wordDe: newWords,
+          wordCze: "",
+          sentence: "",
+          showNotification: true,
+          notificationContent: "Slovo bylo přidáno"
+        }
+      } 
+      
+      if (action.type === "NO_WORD_ADDED") {
+        console.log("není vyplneno")
+        return {
+          ...state,
+          showNotification: true,
+          notificationContent: "Vyplňte všechny údaje",
+        }
+      }
+
+      if(action.type === "CLEAR_NOTIFICATION"){
         return{
             ...state,
-            wordDe: newWords,
-            wordCze:"",
-            sentence:"",
-            showNotification: true,
-            notificationContent: "Slovo bylo přidáno"
+          showNotification: false,
+          notificationContent: ""
         }
-    }
+      }
 
-    return state
+      return new Error ("Chyba - žádná shoda s action.type")
+      
+      
 }
 
 const defaultState = {
     wordDe:[],
+    wordCze: [],
+    sentence: [],
     showNotification: false,
     notificationContent: ""
 }
@@ -37,17 +59,17 @@ const defaultState = {
 const[state, dispatch] = useReducer(reducer, defaultState)
 
 
-
-
 const submitForm = async (e)=>{
     e.preventDefault()
 
     if (wordDe && wordCze && sentence) {
-        const newWord = { id: new Date().getTime(), name: wordDe }
+        const newWord = { id: new Date().getTime(), name: wordDe, wordCze, sentence }
         dispatch({ type: "ADD_WORD", payload: newWord })
-      } else {
-        setShowNotification(false)
+      } else if (!wordDe || !wordCze || !sentence) {
+        console.log("Not all fields filled")
+        dispatch({type: "NO_WORD_ADDED"})
       }
+      
 
     const newWord = {
         wordCze,
@@ -70,10 +92,16 @@ const submitForm = async (e)=>{
     setSentence("")
 }
 
+const clearNotification = () =>{
+    dispatch({type: "CLEAR_NOTIFICATION"})
+
+}
 
   return <div>
             <div className="ADDNotif">
-                {state.showNotification && <Modal notificationContent={state.notificationContent}/>}
+                {state.showNotification && <Modal notifContent={state.notificationContent}
+                clearNotif={clearNotification}
+                />}
             </div>
              <h1>Přidat nové slovo</h1>
              <form onSubmit={submitForm}>

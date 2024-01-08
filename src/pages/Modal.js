@@ -1,11 +1,19 @@
+import { useEffect } from "react"
+import "./Modal.css"
 
+const Modal = ({notifContent, clearNotif}) => {
+    useEffect(()=>{
+        setTimeout(() =>{
+            clearNotif()
 
-const Modal = () => {
+        }, 2000)
+    })
+
   return (
-    <section>
-        Slovíčko bylo přidáno
-    </section>
-  )
+    <div className="modal-box">
+        <div className="modal-text">{notifContent}</div>
+    </div>
+    )
 }
 
 export default Modal
