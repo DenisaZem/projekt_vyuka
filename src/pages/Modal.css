@@ -1,21 +1,44 @@
-
-
-
-.modal-box{
+.modal-box {
     position: relative;
-
+    min-width: 150px;
+    max-width: 800px;
+    width: 400px;
 }
 
-.modal-text{
-
+.modal-text {
     position: absolute;
-    top: -100px;
-    left: -50px;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 400px;  
+    height: 50px;
+    text-align: center;  
     font-size: 30px;
-    width: 250px;
-    color: yellow;
+    font-family: monospace;
+    color: rgb(197, 179, 42);
+    font-weight: 600;
+  
+}
 
+@media screen and (max-width: 810px){
+
+    .modal-box {
+        position: relative;
+        min-width: 150px;
+        max-width: 800px;
     
-
-
+    }
+    
+    .modal-text {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%); 
+        width: 100%; 
+        text-align: center;  
+        font-family: monospace;
+        color: rgb(197, 179, 42);
+        font-weight: 600;
+     
+    }
 }
