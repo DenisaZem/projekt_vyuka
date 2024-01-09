@@ -45,7 +45,7 @@ useEffect(() => {
           className="iconBook"
           alt="onlineEdu"
         />
-        <div className="work-menu">
+        <div className={`work-menu ${showMenu ? "open" : ""}`}>
           <div className="menu-overlay"></div>
           <div className="nav-menu">
             <div className="close-nav-menu" onClick={handleMenuToggle}>
