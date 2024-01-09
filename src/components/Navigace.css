@@ -43,7 +43,7 @@ nav{
   width: 100%;
   display: flex;
   background-color: white;
-  padding: 20px 36px;
+  padding: 20px 5px;
   position: fixed;
   flex-direction: row;
   justify-content:center;
@@ -90,14 +90,40 @@ nav a {
 
 @media screen and (max-width: 950px){
   .iconBook {
-   display: none;
+    width: 100px;
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 920px){
+  .iconBook {
+    width: 100px;
+    padding: 10px;
+  }
+  nav a{
+    font-size: 23px;
+    font-weight: bold;
+    color: #525272;
+    margin: 23px;
+    text-decoration: none;
   }
 }
 
 
-@media screen and (max-width: 810px) {
+@media screen and (max-width: 819px) {
   body{
     font-family:Helvetica;
+  }
+
+  .iconBook {
+    visibility: hidden;
+  }
+
+  .iconBook2{
+    width: 110px;
+    height: 50px;
+    padding: 15px;
+    margin-left: 20px;
   }
 
   .work-menu {
@@ -115,11 +141,11 @@ nav a {
     background-color: white;
   }
 
-  /* .work-menu.open {
+  .work-menu.open {
     right: 0;
     transform: scale(1);
     height: 350px;
-  } */
+  }
 
 
   .nav-menu{
@@ -132,7 +158,6 @@ nav a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* border:2px solid #525272; */
     
   }
 
@@ -147,7 +172,7 @@ nav a {
   
     font-size: 29px;
     color: black;
-    width: 100%; /* Přidáno pro zabrání zalamování na nový řádek */
+    width: 100%;
     border-bottom: 1px solid #525272;
     transition: transform 0.5s ease;
   }
@@ -176,9 +201,7 @@ nav a {
     transform: translateX(0%);
     transition: transform 0.8s ease;
   }
-  /* .nav-menu-button:hover{
-    background-color: none;
-  } */
+ 
 
   .menuButton{
     display: flex;
@@ -198,10 +221,6 @@ nav a {
   .menuButton:hover {
     transform: scale(1.2);
   }
-
-/* .iconBook {
-  display: none;
-} */
 
 .hide{
   display: none;
