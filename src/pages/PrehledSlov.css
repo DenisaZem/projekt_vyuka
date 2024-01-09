@@ -25,6 +25,7 @@
 
 .wordBorder {
     width: 300px;
+    min-height: 272px;
     margin: 15px;
     padding: 20px;
     border: 2px solid rgb(168, 166, 163);

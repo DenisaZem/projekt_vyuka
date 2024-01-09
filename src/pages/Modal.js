@@ -10,8 +10,10 @@ const Modal = ({notifContent, clearNotif}) => {
     })
 
   return (
-    <div className="modal-box">
-        <div className="modal-text">{notifContent}</div>
+    <div className="modal-conteiner">
+        <div className="modal-box">
+            <div className="modal-text">{notifContent}</div>
+        </div>
     </div>
     )
 }

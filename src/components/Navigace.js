@@ -69,7 +69,7 @@ useEffect(() => {
           </div>
         </div>
       </nav>
-      <div className="justBut">
+  <div className="nav-menu-button">
         <button className="menuButton" onClick={handleMenuToggle}>
           {showMenu ? (
             <GiCancel className="buttonHam" />
@@ -77,7 +77,8 @@ useEffect(() => {
             <GiHamburgerMenu className="buttonHam" />
           )}
         </button>
-      </div>
+  </div>
+   
     </header>
   );
 };
