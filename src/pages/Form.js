@@ -31,7 +31,7 @@ const reducer =(state, action)=>{
         return {
           ...state,
           showNotification: true,
-          notificationContent: "Vyplňte všechny údaje",
+          notificationContent: "Vyplňte prosím všechny údaje",
         }
       }
 
@@ -63,33 +63,33 @@ const submitForm = async (e)=>{
     e.preventDefault()
 
     if (wordDe && wordCze && sentence) {
-        const newWord = { id: new Date().getTime(), name: wordDe, wordCze, sentence }
-        dispatch({ type: "ADD_WORD", payload: newWord })
-      } else if (!wordDe || !wordCze || !sentence) {
-        console.log("Not all fields filled")
-        dispatch({type: "NO_WORD_ADDED"})
-      }
+        const newWord = { name: wordDe, wordCze, sentence };
+        dispatch({ type: "ADD_WORD", payload: newWord });
       
 
-    const newWord = {
-        wordCze,
-        wordDe,
-        sentence
+    // const newWord = {
+    //     wordCze,
+    //     wordDe,
+    //     sentence
+    // }
+
+    try {
+        await projectFirestore.collection("deutsch").add(newWord);
+        setWordCze("");
+        setWordDe("");
+        setSentence("");
+      } catch (err) {
+        console.error(err.message);
+      }
+    } else {
+      console.log("Not all fields filled");
+      dispatch({ type: "NO_WORD_ADDED" });
     }
 
-    try{
-        await projectFirestore.collection("deutsch").add(newWord)
-        setWordCze("")
-        setWordDe("")
-        setSentence("")
-    }catch (err){
-        console.log(err.message)
-    }
 
-
-    setWordCze("")
-    setWordDe("")
-    setSentence("")
+    // setWordCze("")
+    // setWordDe("")
+    // setSentence("")
 }
 
 const clearNotification = () =>{
@@ -98,10 +98,12 @@ const clearNotification = () =>{
 }
 
   return <div>
-            <div className="ADDNotif">
-                {state.showNotification && <Modal notifContent={state.notificationContent}
-                clearNotif={clearNotification}
-                />}
+            <div className="container--ADDNotif">
+                <div className="ADDNotif">
+                    {state.showNotification && <Modal notifContent={state.notificationContent}
+                    clearNotif={clearNotification}
+                    />}
+                </div>
             </div>
              <h1>Přidat nové slovo</h1>
              <form onSubmit={submitForm}>
@@ -138,7 +140,7 @@ const clearNotification = () =>{
                 <div className="renderNewWord--function">
                     <ul>
                         {state.wordDe.map((word) => (
-                        <li key={word.id}>{word.name}</li>
+                        <li>{word.name}</li>
                         ))}
                     </ul>
                 </div>
